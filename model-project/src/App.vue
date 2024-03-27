@@ -12,7 +12,21 @@
     </MyModal>
   </div>
 
+
+  <div v-if="showModal2">
+    <MyModal  @close="toggleModal2">
+      <template v-slot:links>
+        <a href="#">sign up now Modal 2</a>
+        <a href="#"> more info Modal 2</a>
+      </template>
+  
+    </MyModal>
+  </div>
+
+
   <button @click="toggleModal">open modal</button>
+  <br>
+  <button @click="toggleModal2">open modal 2</button>
 </template>
 
 <script>
@@ -23,13 +37,16 @@ export default {
   data () {
     return {
       title: 'my first vue app',
-     
       showModal:false,
+      showModal2:false,
     }
   },
   methods:{
     toggleModal(){
         this.showModal = !this.showModal
+    },
+    toggleModal2(){
+        this.showModal2 = !this.showModal2
     }
   }
 }
