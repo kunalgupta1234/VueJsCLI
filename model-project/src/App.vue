@@ -1,16 +1,17 @@
 <template>
-  <h1>My First vue app</h1>
-  <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+  <h1>{{title}}</h1>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    // HelloWorld
+  data(){
+    return{
+      title:"my first vue app :)"
+    }
   }
+
 }
 </script>
 
